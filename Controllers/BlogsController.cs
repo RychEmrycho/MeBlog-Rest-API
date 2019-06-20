@@ -27,11 +27,22 @@ namespace MeBlog_Rest_API.Controllers
             return await _context.Blogs.ToListAsync();
         }
 
+        // GET: api/Blogs/preload-data
+        [HttpGet("preload-data")]
+        public async Task<ActionResult<IEnumerable<Blog>>> GetBlogsPreloadRelatedData()
+        {
+            return await _context.Blogs.Include(blog => blog.Posts).ToListAsync();
+        }
+
         // GET: api/Blogs/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Blog>> GetBlog(int id)
         {
             var blog = await _context.Blogs.FindAsync(id);
+
+            await _context.Entry(blog)
+                .Collection(b => b.Posts)
+                .LoadAsync();
 
             if (blog == null)
             {
@@ -39,6 +50,15 @@ namespace MeBlog_Rest_API.Controllers
             }
 
             return blog;
+        }
+
+        // GET: api/Blogs/with-title?query=text
+        [HttpGet("with-title")]
+        public async Task<ActionResult<IEnumerable<Blog>>> GetBlogsWithTitle(string query)
+        {
+            return await _context.Blogs
+                .Where(b => b.Name.Contains(query))
+                .ToListAsync();
         }
 
         // PUT: api/Blogs/5
