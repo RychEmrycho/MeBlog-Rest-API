@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeBlog Rest API", "MeBlog Rest API.csproj", "{17EFAC0D-EE28-45AF-8177-E6F74B7687E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17EFAC0D-EE28-45AF-8177-E6F74B7687E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17EFAC0D-EE28-45AF-8177-E6F74B7687E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17EFAC0D-EE28-45AF-8177-E6F74B7687E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17EFAC0D-EE28-45AF-8177-E6F74B7687E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D220B95F-5291-437D-94FF-5EDDFCF924C4}
+	EndGlobalSection
+EndGlobal
